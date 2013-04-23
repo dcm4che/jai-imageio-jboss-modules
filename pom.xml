@@ -20,17 +20,6 @@
       <artifactId>jai_imageio</artifactId>
       <version>${project.version}</version>
     </dependency>
-    <dependency>
-      <groupId>com.sun.media</groupId>
-      <artifactId>clibwrapper_jiio</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.sun.media</groupId>
-      <artifactId>clib_jiio</artifactId>
-      <type>zip</type>
-      <version>${project.version}</version>
-    </dependency>
   </dependencies>
   <repositories>
     <repository>
