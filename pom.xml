@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.dcm4che</groupId>
-  <artifactId>jai-imageio-jboss-modules</artifactId>
-  <version>1.2-pre-dr-b04</version>
+  <artifactId>jai_imageio-jboss-modules</artifactId>
+  <version>1.2</version>
   <packaging>pom</packaging>
   <distributionManagement>
     <repository>
@@ -14,6 +14,31 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  <dependencies>
+    <dependency>
+      <groupId>com.sun.media</groupId>
+      <artifactId>jai_imageio</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.media</groupId>
+      <artifactId>clibwrapper_jiio</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.media</groupId>
+      <artifactId>clib_jiio</artifactId>
+      <type>zip</type>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <id>www.dcm4che.org</id>
+      <name>dcm4che Repository</name>
+      <url>http://www.dcm4che.org/maven2</url>
+    </repository>
+  </repositories>
   <build>
     <plugins>
       <plugin>

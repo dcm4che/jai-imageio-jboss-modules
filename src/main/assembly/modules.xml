@@ -10,11 +10,25 @@
     <fileSet>
       <directory>${project.basedir}/src/main/modules</directory>
       <outputDirectory>/modules</outputDirectory>
+      <filtered>true</filtered>
     </fileSet>
   </fileSets>
   <dependencySets>
     <dependencySet>
       <outputDirectory>/modules/com/sun/media/imageio/main</outputDirectory>
+      <includes>
+        <include>com.sun.media:clibwrapper_jiio</include>
+        <include>com.sun.media:jai_imageio</include>
+      </includes>
+      <useTransitiveDependencies>false</useTransitiveDependencies>
+      <useProjectArtifact>false</useProjectArtifact>
+    </dependencySet>
+    <dependencySet>
+      <outputDirectory>/modules/com/sun/media/imageio/main/lib</outputDirectory>
+      <includes>
+        <include>com.sun.media:clib_jiio</include>
+      </includes>
+      <unpack>true</unpack>
       <useProjectArtifact>false</useProjectArtifact>
     </dependencySet>
   </dependencySets>
